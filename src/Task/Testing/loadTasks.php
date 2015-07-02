@@ -4,6 +4,15 @@ namespace Robo\Task\Testing;
 trait loadTasks 
 {
     /**
+     * @param null $pathToBehat
+     * @return Codecept
+     */
+    protected function taskBehat($pathToBehat = null)
+    {
+        return new Behat($pathToBehat);
+    }
+
+    /**
      * @param null $pathToCodeception
      * @return Codecept
      */
